@@ -1,7 +1,6 @@
 //Homepage//
 const cards = document.querySelectorAll('.memory-card');
 
-
 //This is the gam logic, in order to flip the cards, check for a match, disable cards,//
 // unflip cards, reset board and shuffle.//
 
@@ -21,7 +20,6 @@ function flipCard() {
     }
     secondCard = this;
     lockBoard = true;
-
     checkForMatch();
 }
 
@@ -35,6 +33,30 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
     resetBoard();
 }
+
+//Unflip card function 
+function unflipCards() {
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        resetBoard();
+    }, 1500);
+}
+
+//Reset board function 
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+//Shuffle cards function 
+(function shuffle() {
+    cards.forEach(card => {
+        let ramdomPos = Math.floor(Math.random() * 12);
+        card.style.order = ramdomPos;
+    });
+})();
+
+cards.forEach(card => card.addEventListener('click', flipCard));
