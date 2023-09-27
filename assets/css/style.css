@@ -94,9 +94,15 @@ h1 {
     border-width: thin;
 }
 
-
 /*Gaming area*/
-
+.game-area {
+    width: 90%;
+    height: 380px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
 
 /*Footer Styling*/
 footer {
