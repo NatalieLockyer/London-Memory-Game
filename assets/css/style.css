@@ -19,3 +19,31 @@ body {
     font-family: 'Shadows Into Light', cursive;
     position: relative;
 }
+
+/*Footer Styling*/
+footer {
+    margin-top: auto;
+}
+
+#social-media {
+    text-align: center;
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-media li {
+    font-size: 20px;
+}
+
+#social-media a {
+    color: black;
+}
+
+.copyright {
+    background-color: white;
+    text-align: center;
+    letter-spacing: 0.3rem;
+}
