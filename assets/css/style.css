@@ -1,6 +1,15 @@
 /* Google Fonts to be added here*/
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
+/*root colours to be added here*/
+
+/* Wildcard to override default style browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: pink;
 }
