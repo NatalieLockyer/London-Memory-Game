@@ -49,6 +49,21 @@ h1 {
     letter-spacing: 0.3rem;
 }
 
+.reset-game {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-reset-game {
+    padding: 5px 10px;
+    background-color: white;
+    font-size: 0.8rem;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    border-radius: 12px;
+    letter-spacing: 0.3rem;
+}
+
 /*Footer Styling*/
 footer {
     margin-top: auto;
