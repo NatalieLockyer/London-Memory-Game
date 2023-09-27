@@ -20,6 +20,18 @@ body {
     position: relative;
 }
 
+/*Header Styling*/
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    color: black;
+}
+
 /*Footer Styling*/
 footer {
     margin-top: auto;
