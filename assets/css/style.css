@@ -32,6 +32,23 @@ h1 {
     color: black;
 }
 
+/* Main Styling*/
+
+.h2p-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-how-to-play {
+    padding: 5px 10px;
+    background-color: white;
+    font-size: 0.8rem;
+    border-radius: 12px;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+}
+
 /*Footer Styling*/
 footer {
     margin-top: auto;
