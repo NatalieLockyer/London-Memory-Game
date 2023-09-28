@@ -7,12 +7,16 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let movesTaken = 0;
 
 //getters
 let howToPlayBtn = document.getElementById('btn-how-to-play');
+let resetGameBtn = document.getElementById('btn-reset-game');
+
 
 //event listeners
 howToPlayBtn.addEventListener('click', showHowToPlay);
+resetGameBtn.addEventListener('click', resetGame);
 
 //How to play function
 function showHowToPlay() {
@@ -60,7 +64,12 @@ function unflipCards() {
 //Reset board function 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
+    [firstCard, secondCard] = [null, null]
+}
+
+//Reset board btn function
+function resetGame() {
+    window.location.reload();
 }
 
 //Shuffle cards function 
