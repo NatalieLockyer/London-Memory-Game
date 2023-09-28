@@ -1,12 +1,24 @@
 //Homepage//
 const cards = document.querySelectorAll('.memory-card');
 
-//This is the gam logic, in order to flip the cards, check for a match, disable cards,//
+//This is the game logic, in order to flip the cards, check for a match, disable cards,//
 // unflip cards, reset board and shuffle.//
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
+//getters
+let howToPlayBtn = document.getElementById('btn-how-to-play');
+
+//event listeners
+howToPlayBtn.addEventListener('click', showHowToPlay);
+
+//How to play function
+function showHowToPlay() {
+    console.log(' Hey the how to play button was pressed');
+    //here we need to do something like a modal with instructions on how to play
+}
 
 //flipcard function//
 function flipCard() {
