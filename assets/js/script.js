@@ -12,7 +12,7 @@ let movesTaken = 0;
 //getters
 let howToPlayBtn = document.getElementById('btn-how-to-play');
 let resetGameBtn = document.getElementById('btn-reset-game');
-
+let movesCounter = document.getElementById('moves-counter');
 
 //event listeners
 howToPlayBtn.addEventListener('click', showHowToPlay);
@@ -42,7 +42,11 @@ function flipCard() {
 //Check for match function
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+    movesTaken++;
     isMatch ? disableCards() : unflipCards();
+    console.log('moves taken:', movesTaken);
+    console.log('moves counter:', movesCounter);
+    movesCounter.innerText = movesTaken;
 }
 
 //Disable card function 
@@ -64,7 +68,7 @@ function unflipCards() {
 //Reset board function 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null]
+    [firstCard, secondCard] = [null, null];
 }
 
 //Reset board btn function
