@@ -19,7 +19,7 @@ let span = document.getElementsByClassName('close')[0];
 //event listeners
 resetGameBtn.addEventListener('click', resetGame);
 
-//How to play function - When user clicks "how to play button
+//How to play function - When user clicks "how to play button - credit to w3schools for help with this code - details in ReadME
 btn.onclick = function () {
     modal.style.display = "block";
 }
