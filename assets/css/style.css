@@ -54,14 +54,16 @@ h1 {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 75%;
     height: 75%;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(153, 14, 14);
+    background-color: rgba(153, 14, 14, 0.4);
 }
 
+/*This is the model content*/
 .modal-content {
     background-color: white;
     margin: 15% auto;
@@ -70,6 +72,32 @@ h1 {
     width: 75%;
 }
 
+/*Close Button*/
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*Hover for close button*/
+.close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.game-instructions {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    letter-spacing: 0.1rem;
+}
+
+.steps {
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
 
 /*Countdown and Moves taken styling*/
 .timer-moves-container {

@@ -10,16 +10,32 @@ let firstCard, secondCard;
 let movesTaken = 0;
 
 //getters
-let howToPlayBtn = document.getElementById('btn-how-to-play');
 let resetGameBtn = document.getElementById('btn-reset-game');
 let movesCounter = document.getElementById('moves-counter');
-let modal =
+let modal = document.getElementById('myModal');
+let btn = document.getElementById('btn-how-to-play');
+let span = document.getElementsByClassName('close')[0];
 
 //event listeners
-howToPlayBtn.addEventListener('click', showHowToPlay);
 resetGameBtn.addEventListener('click', resetGame);
 
-//How to play function
+//How to play function - When user clicks "how to play button
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+
+//When user clicks on the X (close button)
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+//When user clicks anywhere on the page outside of the modal, this will close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none"
+    }
+}
+
 function showHowToPlay() {
     console.log(' Hey the how to play button was pressed');
     //here we need to do something like a modal with instructions on how to play
