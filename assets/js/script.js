@@ -29,18 +29,6 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
-//When user clicks anywhere on the page outside of the modal, this will close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none"
-    }
-}
-
-function showHowToPlay() {
-    console.log(' Hey the how to play button was pressed');
-    //here we need to do something like a modal with instructions on how to play
-}
-
 //flipcard function//
 function flipCard() {
     if (lockBoard) return;
