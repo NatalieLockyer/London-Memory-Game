@@ -42,11 +42,11 @@ h1 {
 #btn-how-to-play {
     padding: 5px 10px;
     background-color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
     border-radius: 12px;
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
 }
 
 /* The Modal (Background for the pop up box) */
@@ -81,7 +81,7 @@ h1 {
     top: 0;
     right: 0;
     padding: 0 10px;
-    font-size: 35px;
+    font-size: 1.2rem;
     cursor: pointer;
     color: rgba (0, 0, 0, 0.5);
 }
@@ -115,19 +115,29 @@ h1 {
 .countdown-container {
     background-color: white;
     display: flex;
-    padding: 10px;
+    padding: 5px;
     letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
     border-radius: 12px;
     border-style: solid;
     border-width: thin;
 }
 
+.timer-area {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
 .moves-container {
     background-color: white;
     display: flex;
-    padding: 10px;
+    padding: 5px;
     letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
     border-radius: 12px;
     border-style: solid;
@@ -188,11 +198,11 @@ h1 {
 #btn-reset-game {
     padding: 5px 10px;
     background-color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
     border-radius: 12px;
-    letter-spacing: 0.3rem;
 }
 
 /*Footer Styling*/
