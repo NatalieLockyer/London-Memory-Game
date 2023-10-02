@@ -22,12 +22,31 @@ resetGameBtn.addEventListener('click', resetGame);
 //How to play function - When user clicks "how to play button - credit to w3schools for help with this code - details in ReadME
 btn.onclick = function () {
     modal.style.display = "block";
-}
+};
 
 //When user clicks on the X (close button)
 span.onclick = function () {
     modal.style.display = "none";
+};
+
+//Countdown timer
+let timeLeft = 90;
+let countdownTimer = document.getElementById('timer-area');
+
+let timer = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timer);
+        doSomething();
+    } else {
+        countdownTimer.innerHTML = timeLeft + 'seconds remaining';
+        timeLeft--;
+    }
 }
+
+
+
 
 //flipcard function//
 function flipCard() {
@@ -42,7 +61,7 @@ function flipCard() {
     secondCard = this;
     lockBoard = true;
     checkForMatch();
-}
+};
 
 //Check for match function
 function checkForMatch() {
@@ -52,14 +71,14 @@ function checkForMatch() {
     console.log('moves taken:', movesTaken);
     console.log('moves counter:', movesCounter);
     movesCounter.innerText = movesTaken;
-}
+};
 
 //Disable card function 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
-}
+};
 
 //Unflip card function 
 function unflipCards() {
@@ -68,18 +87,18 @@ function unflipCards() {
         secondCard.classList.remove('flip');
         resetBoard();
     }, 1500);
-}
+};
 
 //Reset board function 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-}
+};
 
 //Reset board btn function
 function resetGame() {
     window.location.reload();
-}
+};
 
 //Shuffle cards function 
 (function shuffle() {
