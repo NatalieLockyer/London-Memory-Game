@@ -13,6 +13,7 @@ let movesTaken = 0;
 let howToPlayBtn = document.getElementById('btn-how-to-play');
 let resetGameBtn = document.getElementById('btn-reset-game');
 let movesCounter = document.getElementById('moves-counter');
+let modal =
 
 //event listeners
 howToPlayBtn.addEventListener('click', showHowToPlay);
