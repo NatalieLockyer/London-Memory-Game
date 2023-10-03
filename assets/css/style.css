@@ -144,7 +144,7 @@ h1 {
     border-width: thin;
 }
 
-#winner {
+#winnerModal {
     position: absolute;
     z-index: 10;
     left: 50%;
@@ -161,6 +161,10 @@ h1 {
     margin: 15% auto;
     padding: 20px;
     background-color: white;
+    text-align: center;
+}
+
+#youWin {
     text-align: center;
 }
 

@@ -11,11 +11,12 @@ let movesTaken = 0;
 
 
 //getters
-let resetGameBtn = document.getElementById('btn-reset-game');
-let movesCounter = document.getElementById('moves-counter');
-let modal = document.getElementById('myModal');
-let btn = document.getElementById('btn-how-to-play');
-let span = document.getElementsByClassName('close')[0];
+const resetGameBtn = document.getElementById('btn-reset-game');
+const movesCounter = document.getElementById('moves-counter');
+const modal = document.getElementById('myModal');
+const btn = document.getElementById('btn-how-to-play');
+const span = document.getElementsByClassName('close')[0];
+
 
 //event listeners
 resetGameBtn.addEventListener('click', resetGame);
@@ -28,22 +29,32 @@ btn.onclick = function () {
 //When user clicks on the X (close button)
 span.onclick = function () {
     modal.style.display = "none";
+
+
+    //countdown timer
+    let timeLeft = 90;
+    let countdownTimer = document.getElementById('timer-area');
+
+    let timer = setInterval(countdown, 1000);
+
+    function countdown() {
+        if (timeLeft == -1) {
+            clearTimeout(timer);
+         } else {
+            countdownTimer.innerHTML = timeLeft + 'seconds remaining';
+            timeLeft--;
+        }
+    }
+
 };
 
-//Countdown timer
-let timeLeft = 90;
-let countdownTimer = document.getElementById('timer-area');
+//Message to alert player they have won. ************************
+function replay() {
+    document.getElementById('winner').style.display = 'none';
+}
 
-let timer = setInterval(countdown, 1000);
-
-function countdown() {
-    if (timeLeft == -1) {
-        clearTimeout(timer);
-        doSomething();
-    } else {
-        countdownTimer.innerHTML = timeLeft + 'seconds remaining';
-        timeLeft--;
-    }
+function go() {
+    const youWin = document.getElementById('youWin');
 }
 
 //Message to alert player that they have run out of time. 
@@ -73,17 +84,6 @@ function checkForMatch() {
     console.log('moves counter:', movesCounter);
     movesCounter.innerText = movesTaken;
 };
-
-//Message to alert player they have won. ************************
-function replay() {
-    document.getElementById('winner').style.display = 'none';
-}
-function lastMatch() {
-    let youWin = document.getElementById('youWin');
-    if(lastMatch==0) {
-
-    }
-}
 
 //Disable card function 
 function disableCards() {
@@ -120,4 +120,5 @@ function resetGame() {
     });
 })();
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card => card.addEventListener('click', flipCard))
+    ;

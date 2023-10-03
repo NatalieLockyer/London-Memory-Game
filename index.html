@@ -54,6 +54,11 @@
             <div class="countdown-container">
                 <div onClick="flipcard()" class="countdown-area">
                     <div id="timer-area"></div>
+                    <div>
+                        <span id="mins">mins</span>
+                        <span>:</span>
+                        <span id="secs">secs</span>
+                    </div>
                 </div>
             </div>
 
@@ -64,9 +69,10 @@
             </div>
 
             <!--Win Message-->
-            <div id="winner">
-                <div id="winnerContent">
-                    <h2 id="youWin">Conratulations you have beaten the clock...You Win!!</h2>
+            <div id="winnerModal" class="modal">
+                <div id="WinnerContent">
+                    <span class="close">&times;</span>
+                    <p id="youWin">Conratulations you have beaten the clock...You Win!!</p>
                     <div id="btnReplay" class="button" onclick="replay()">Play Again</div>
                 </div>
             </div>
