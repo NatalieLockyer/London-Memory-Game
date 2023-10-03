@@ -144,7 +144,33 @@ h1 {
     border-width: thin;
 }
 
+<<<<<<< HEAD
 
+=======
+#winnerModal {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+
+#winnerContent {
+    width: 300px;
+    height: 300px;
+    margin: 15% auto;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+#youWin {
+    text-align: center;
+}
+>>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
 
 /*Gaming area*/
 .game-area {

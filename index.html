@@ -36,11 +36,12 @@
                     <p class="game-instructions">How to Play!
                         <br>
                     <ol class="steps">
-                        <li>Player chooses two cards to click and turn over</li>
+                        <li>The timer will start when the player chooses and clicks to cards to turn over</li>
                         <li>If the pictures match, the cards will remain turned over on the board</li>
-                        <li>If the pictures dont match, they will return face down</li>
+                        <li>If the pictures dont match, they will be returned face down</li>
                         <li>Once all the cards are turned over the game will end</li>
-                        <li>**But Remember** You are working against the clock, if the time runs out, you lose!</li>
+                        <li>**Remember** You are working against the clock, to get on the leaderboard, you must be
+                            quick!</li>
                         <li>Good luck</li>
                     </ol>
                     </p>
@@ -53,25 +54,26 @@
 
             <div class="countdown-container">
                 <div onClick="flipcard()" class="countdown-area">
-                    <div id="timer-area">Timer </div>
+                    <div id="timer-area">Timer:</div>
+                </div>
+
+                <!--Amount of Moves taken counter-->
+                <div class="moves-container">
+                    <div class="moves-box"> Moves Taken:</div>
+                    <div id="moves-counter">0</div>
                 </div>
             </div>
 
-            <!--Amount of Moves taken counter-->
-            <div class="moves-container">
-                <div class="moves-box"> Moves Taken:</div>
-                <div id="moves-counter">0</div>
+            <!--Modal Win Message-->
+            <div id="winner">
+                <div id="modal-content" class="modal"></div>
+                <div class="close">&times;</div>
+                <p id="modal-content">Conratulations you have beaten the clock...You Win!! Click Next to check out where
+                    you
+                    are on
+                    the Leaderboard!!</p>
+                <div id="btnNext" class="button">Next</div>
             </div>
-        </div>
-
-        <!--Modal Win Message-->
-        <div id="winner">
-            <div id="modal-content" class="modal"></div>
-            <div class="close">&times;</div>
-            <p id="modal-content">Conratulations you have beaten the clock...You Win!! Click Next to check out where you are on
-                the Leaderboard!!</p>
-            <div id="btnNext" class="button">Next</div>
-        </div>
         </div>
 
         <!--This is the game area - I have used a tutorial for this part and is documented in the credits section of my ReadME-->
