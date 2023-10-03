@@ -36,11 +36,12 @@
                     <p class="game-instructions">How to Play!
                         <br>
                     <ol class="steps">
-                        <li>Player chooses two cards to click and turn over</li>
+                        <li>The timer will start when the player chooses and clicks to cards to turn over</li>
                         <li>If the pictures match, the cards will remain turned over on the board</li>
-                        <li>If the pictures dont match, they will return face down</li>
+                        <li>If the pictures dont match, they will be returned face down</li>
                         <li>Once all the cards are turned over the game will end</li>
-                        <li>**But Remember** You are working against the clock, if the time runs out, you lose!</li>
+                        <li>**Remember** You are working against the clock, to get on the leaderboard, you must be
+                            quick!</li>
                         <li>Good luck</li>
                     </ol>
                     </p>
@@ -52,13 +53,9 @@
         <div class="timer-moves-container">
 
             <div class="countdown-container">
-                <div onClick="flipcard()" class="countdown-area">
-                    <div id="timer-area"></div>
-                    <div>
-                        <span id="mins">mins</span>
-                        <span>:</span>
-                        <span id="secs">secs</span>
-                    </div>
+                <div class="countdown-area">
+                    <div id="timer-area">Timer:</div>
+
                 </div>
             </div>
 
@@ -72,7 +69,7 @@
             <div id="winnerModal" class="modal">
                 <div id="WinnerContent">
                     <span class="close">&times;</span>
-                    <p id="youWin">Conratulations you have beaten the clock...You Win!!</p>
+                    <p id="youWin">Congratulations you have beaten the clock...You Win!!</p>
                     <div id="btnReplay" class="button" onclick="replay()">Play Again</div>
                 </div>
             </div>

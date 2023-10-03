@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+});
+
 //Homepage//
 //getters
 const cards = document.querySelectorAll('.memory-card');
@@ -6,6 +9,8 @@ const movesCounter = document.getElementById('moves-counter');
 const modal = document.getElementById('myModal');
 const btn = document.getElementById('btn-how-to-play');
 const span = document.getElementsByClassName('close')[0];
+const timeValue = document.getElementById('timer-area');
+
 
 //event listeners
 resetGameBtn.addEventListener('click', resetGame);
@@ -20,10 +25,16 @@ let firstCard, secondCard;
 //Initial moves taken and Win count 
 let movesTaken = 0;
 let winCount = 0;
+let numMatches = 0;
+
 
 //Initial Time
 let seconds = 0;
 let minutes = 0;
+let hasStartedTimer = false;
+let interval = 0;
+let ifHasWinner = false;
+
 
 /*Array Items    should i do this?
 const items = [
@@ -48,23 +59,53 @@ btn.onclick = function () {
 //When user clicks on the X (close button)
 span.onclick = function () {
     modal.style.display = "none";
+};
 
-//Format of time before displaying
-let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
-let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+//Layout of Timer
+const timeGenerator = () => {
+    seconds += 1;
+    if (seconds > 60) {
+        minutes += 1;
+        seconds = 0;
+    }
 
+    //Format of time before displaying
+    let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
+    let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
+    timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+
+};
+
+// Start the timer on the first card click
+function startTimer() {
+    if (!hasStartedTimer) {
+        interval = setInterval(timeGenerator, 1000);
+        hasStartedTimer = true; // Set it to true so it doesn't start again.
+    }
+}
+
+// flipcard function//
+function flipCardStart() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classList.add('flip');
+
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+        return;
+    }
+
+    secondCard = this;
+    lockBoard = true;
+    checkForMatch();
+};
 
 //Message to alert player they have won. ************************
 function replay() {
     document.getElementById('winner').style.display = 'none';
 }
-
-function go() {
-    const youWin = document.getElementById('youWin');
-}
-
-//Message to alert player that they have run out of time. 
 
 
 //flipcard function//
@@ -77,6 +118,10 @@ function flipCard() {
         firstCard = this;
         return;
     }
+
+    // Start the timer on the first card click
+    startTimer();
+
     secondCard = this;
     lockBoard = true;
     checkForMatch();
@@ -91,6 +136,22 @@ function checkForMatch() {
     console.log('moves counter:', movesCounter);
     movesCounter.innerText = movesTaken;
 };
+
+//function to stop the timer once all cards are overturned
+if (flipCard[0] === flipCard[1]) {
+    flipCard[0].isMatch = true;
+    flipCard[1].isMatch = true;
+    flipCard.length = 0;
+    numMatches++;
+}
+
+if (numMatches === card.length / 2) {
+    fill(0, 0, 0);
+    Text("Congratulations, You have found all the matches, check out our leaderboard to see where you placed!")
+
+    console.log(flipCard)
+};
+
 
 //Disable card function 
 function disableCards() {
