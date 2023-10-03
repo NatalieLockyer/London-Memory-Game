@@ -9,6 +9,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 let movesTaken = 0;
 
+
 //getters
 let resetGameBtn = document.getElementById('btn-reset-game');
 let movesCounter = document.getElementById('moves-counter');
@@ -45,7 +46,7 @@ function countdown() {
     }
 }
 
-
+//Message to alert player that they have run out of time. 
 
 
 //flipcard function//
@@ -72,6 +73,17 @@ function checkForMatch() {
     console.log('moves counter:', movesCounter);
     movesCounter.innerText = movesTaken;
 };
+
+//Message to alert player they have won. ************************
+function replay() {
+    document.getElementById('winner').style.display = 'none';
+}
+function lastMatch() {
+    let youWin = document.getElementById('youWin');
+    if(lastMatch==0) {
+
+    }
+}
 
 //Disable card function 
 function disableCards() {
