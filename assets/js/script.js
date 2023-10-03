@@ -1,5 +1,14 @@
 //Homepage//
+//getters
 const cards = document.querySelectorAll('.memory-card');
+const resetGameBtn = document.getElementById('btn-reset-game');
+const movesCounter = document.getElementById('moves-counter');
+const modal = document.getElementById('myModal');
+const btn = document.getElementById('btn-how-to-play');
+const span = document.getElementsByClassName('close')[0];
+
+//event listeners
+resetGameBtn.addEventListener('click', resetGame);
 
 //This is the game logic, in order to flip the cards, check for a match, disable cards,//
 // unflip cards, reset board and shuffle.//
@@ -7,21 +16,31 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
+//Initial moves taken and Win count 
 let movesTaken = 0;
+let winCount = 0;
 
+//Initial Time
+let seconds = 0;
+let minutes = 0;
 
-//getters
-const resetGameBtn = document.getElementById('btn-reset-game');
-const movesCounter = document.getElementById('moves-counter');
-const modal = document.getElementById('myModal');
-const btn = document.getElementById('btn-how-to-play');
-const span = document.getElementsByClassName('close')[0];
+/*Array Items    should i do this?
+const items = [
+    {name: "Big Ben", image: "front-card.jpg" },
+    {name: "Buckingham Palace", image: "buckingham-palace.jpg" },
+    {name: "Gerkin", image: "gerkin.jpg"},
+    {name: "London Eye", image: "london-eye.jpg"},
+    {name: "London Underground", image:"london-underground.jpg"},
+    {name: "Red Bus", image: "red-bus.jpg"},
+    {name: "The Shard", image: "the-shard.jpg"},
+    {name: "Tower Bridge", image: "tower-bridge.jpg"}
+]
+*/
 
+/*Modal to appear when "how to play button" is pressed
+Credit to w3schools for help with this code - details in ReadME*/
 
-//event listeners
-resetGameBtn.addEventListener('click', resetGame);
-
-//How to play function - When user clicks "how to play button - credit to w3schools for help with this code - details in ReadME
 btn.onclick = function () {
     modal.style.display = "block";
 };
@@ -30,23 +49,11 @@ btn.onclick = function () {
 span.onclick = function () {
     modal.style.display = "none";
 
+//Format of time before displaying
+let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
+let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
+timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
 
-    //countdown timer
-    let timeLeft = 90;
-    let countdownTimer = document.getElementById('timer-area');
-
-    let timer = setInterval(countdown, 1000);
-
-    function countdown() {
-        if (timeLeft == -1) {
-            clearTimeout(timer);
-         } else {
-            countdownTimer.innerHTML = timeLeft + 'seconds remaining';
-            timeLeft--;
-        }
-    }
-
-};
 
 //Message to alert player they have won. ************************
 function replay() {
