@@ -144,9 +144,6 @@ h1 {
     border-width: thin;
 }
 
-<<<<<<< HEAD
-
-=======
 #winnerModal {
     position: absolute;
     z-index: 10;
@@ -170,7 +167,6 @@ h1 {
 #youWin {
     text-align: center;
 }
->>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
 
 /*Gaming area*/
 .game-area {

@@ -10,11 +10,7 @@ const modal = document.getElementById('myModal');
 const btn = document.getElementById('btn-how-to-play');
 const span = document.getElementsByClassName('close')[0];
 const timeValue = document.getElementById('timer-area');
-<<<<<<< HEAD
 const modalWin = document.getElementById('winner-modal')
-=======
->>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
-
 
 //event listeners
 resetGameBtn.addEventListener('click', resetGame);
@@ -29,20 +25,14 @@ let firstCard, secondCard;
 //Initial moves taken and Win count 
 let movesTaken = 0;
 let winCount = 0;
-<<<<<<< HEAD
 let match = 0
 let length = movesTaken.length;
-=======
-let numMatches = 0;
->>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
-
 
 //Initial Time
 let seconds = 0;
 let minutes = 0;
 let hasStartedTimer = false;
 let interval = 0;
-<<<<<<< HEAD
 
 
 const items = [
@@ -55,23 +45,6 @@ const items = [
     { name: "The Shard", image: "the-shard.jpg" },
     { name: "Tower Bridge", image: "tower-bridge.jpg" }
 ]
-=======
-let ifHasWinner = false;
-
-
-/*Array Items    should i do this?
-const items = [
-    {name: "Big Ben", image: "front-card.jpg" },
-    {name: "Buckingham Palace", image: "buckingham-palace.jpg" },
-    {name: "Gerkin", image: "gerkin.jpg"},
-    {name: "London Eye", image: "london-eye.jpg"},
-    {name: "London Underground", image:"london-underground.jpg"},
-    {name: "Red Bus", image: "red-bus.jpg"},
-    {name: "The Shard", image: "the-shard.jpg"},
-    {name: "Tower Bridge", image: "tower-bridge.jpg"}
-]
-*/
->>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
 
 /*Modal to appear when "how to play button" is pressed
 Credit to w3schools for help with this code - details in ReadME*/
@@ -100,11 +73,9 @@ const timeGenerator = () => {
 
 };
 
-<<<<<<< HEAD
+
 // Start the timer when first pair is turned over
-=======
-// Start the timer on the first card click
->>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
+// Start the timer when the first pair has been selected
 function startTimer() {
     if (!hasStartedTimer) {
         interval = setInterval(timeGenerator, 1000);
@@ -118,8 +89,6 @@ function flipCardStart() {
     if (this === firstCard) return;
 
     this.classList.add('flip');
-<<<<<<< HEAD
-=======
 
     if (!hasFlippedCard) {
         hasFlippedCard = true;
@@ -136,18 +105,17 @@ function flipCardStart() {
 function replay() {
     document.getElementById('winner').style.display = 'none';
 }
->>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
 
-    if (!hasFlippedCard) {
-        hasFlippedCard = true;
-        firstCard = this;
-        return;
-    }
+if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+    return;
+}
 
-    secondCard = this;
-    lockBoard = true;
-    checkForMatch();
-};
+secondCard = this;
+lockBoard = true;
+checkForMatch();
+
 
 //flipcard function//
 function flipCard() {
@@ -160,11 +128,9 @@ function flipCard() {
         return;
     }
 
-<<<<<<< HEAD
-    // Start the timer 
-=======
+
     // Start the timer on the first card click
->>>>>>> b5614913b6d2300a858464e5b5fc6c70dde45e0b
+
     startTimer();
 
     secondCard = this;
