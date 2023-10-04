@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 const cards = document.querySelectorAll('.memory-card');
 const resetGameBtn = document.getElementById('btn-reset-game');
 const movesCounter = document.getElementById('moves-counter');
-const modal = document.getElementById('myModal');
+const modal = document.getElementById('my-modal');
 const btn = document.getElementById('btn-how-to-play');
 const span = document.getElementsByClassName('close')[0];
 const timeValue = document.getElementById('timer-area');
@@ -140,7 +140,7 @@ function pairMatch() {
     resetBoard();
 };
 
-//Ufunction to unflip cards when they are not a match 
+//function to unflip cards when they are not a match 
 function noMatch() {
     lockBoard = true
 
@@ -189,7 +189,7 @@ function winGame() {
 }
 
 function showWinningMessage() {
-    modalWin.style.display = "block";
+    modal.style.display = "block";
 
 }
 
