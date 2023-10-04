@@ -34,7 +34,7 @@ let minutes = 0;
 let hasStartedTimer = false;
 let interval = 0;
 
-
+/*
 const items = [
     { name: "Big Ben", image: "front-card.jpg" },
     { name: "Buckingham Palace", image: "buckingham-palace.jpg" },
@@ -44,10 +44,11 @@ const items = [
     { name: "Red Bus", image: "red-bus.jpg" },
     { name: "The Shard", image: "the-shard.jpg" },
     { name: "Tower Bridge", image: "tower-bridge.jpg" }
-]
+]*/
 
-/*Modal to appear when "how to play button" is pressed
-Credit to w3schools for help with this code - details in ReadME*/
+
+//Modal to appear when "how to play button" is pressed
+//Credit to w3schools for help with this code - details in ReadME
 
 btn.onclick = function () {
     modal.style.display = "block";
@@ -57,6 +58,7 @@ btn.onclick = function () {
 span.onclick = function () {
     modal.style.display = "none";
 };
+
 
 //Layout of Timer
 const timeGenerator = () => {
@@ -73,9 +75,7 @@ const timeGenerator = () => {
 
 };
 
-
-// Start the timer when first pair is turned over
-// Start the timer when the first pair has been selected
+//Start the timer when the first pair has been selected
 function startTimer() {
     if (!hasStartedTimer) {
         interval = setInterval(timeGenerator, 1000);
@@ -87,9 +87,7 @@ function startTimer() {
 function flipCardStart() {
     if (lockBoard) return;
     if (this === firstCard) return;
-
     this.classList.add('flip');
-
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
@@ -99,25 +97,9 @@ function flipCardStart() {
     secondCard = this;
     lockBoard = true;
     checkForMatch();
-};
-
-//Message to alert player they have won. ************************
-function replay() {
-    document.getElementById('winner').style.display = 'none';
 }
 
-if (!hasFlippedCard) {
-    hasFlippedCard = true;
-    firstCard = this;
-    return;
-}
-
-secondCard = this;
-lockBoard = true;
-checkForMatch();
-
-
-//flipcard function//
+// flipcard function//
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -127,16 +109,21 @@ function flipCard() {
         firstCard = this;
         return;
     }
-
-
     // Start the timer on the first card click
-
     startTimer();
-
     secondCard = this;
     lockBoard = true;
     checkForMatch();
-};
+}
+
+
+
+
+/* //Message to alert player they have won. ************************
+function replay() {
+    document.getElementById('winner').style.display = 'none';
+}*/
+
 
 //Check for match function
 function checkForMatch() {
@@ -148,21 +135,14 @@ function checkForMatch() {
     movesCounter.innerText = movesTaken;
 }
 
-//function to stop the timer once all cards are overturned
+/*function to stop the timer once all cards are overturned
 if (flipCard[0] === flipCard[1]) {
     flipCard[0].isMatch = true;
     flipCard[1].isMatch = true;
     flipCard.length = 0;
     numMatches++;
 }
-
-if (numMatches === card.length / 2) {
-    fill(0, 0, 0);
-    Text("Congratulations, You have found all the matches, check out our leaderboard to see where you placed!")
-
-    console.log(flipCard)
-};
-
+*/
 
 //Disable card function 
 function disableCards() {
@@ -184,10 +164,7 @@ function unflipCards() {
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-    if (match == (items.length / 2)) {
-        window.alert("Congratulations! You Won!");
-    };
-}
+};
 
 //Reset board btn function
 function resetGame() {
@@ -204,3 +181,4 @@ function resetGame() {
 
 cards.forEach(card => card.addEventListener('click', flipCard))
     ;
+
