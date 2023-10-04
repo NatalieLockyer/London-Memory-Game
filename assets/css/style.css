@@ -32,7 +32,7 @@ h1 {
     font-size: 2.5rem;
     letter-spacing: 0.3rem;
     text-align: center;
-    color: black;
+    color: navy;
 }
 
 /* Main Styling*/
@@ -55,6 +55,7 @@ main {
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
     letter-spacing: 0.1rem;
+    color: navy;
 }
 
 /* The Modal (Background for the pop up box) */
@@ -66,9 +67,9 @@ main {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    height: 85%;
-    background-color: rgb(153, 14, 14);
-    background-color: rgba(153, 14, 14, 0.4);
+    height: 60%;
+    background-color: rgb(59, 176, 245);
+    background-color: rgba(23, 20, 219, 0.952);
 }
 
 /*This is the model content*/
@@ -110,6 +111,7 @@ main {
     letter-spacing: 0.1rem;
     font-size: 0.9rem;
     font-weight: bold;
+
 }
 
 /*Countdown and Moves taken styling*/
@@ -124,6 +126,7 @@ main {
     background-color: white;
     display: flex;
     padding: 5px;
+    color: navy;
     letter-spacing: 0.1rem;
     font-size: 1rem;
     font-weight: bold;
@@ -143,6 +146,7 @@ main {
     background-color: white;
     display: flex;
     padding: 5px;
+    color: navy;
     letter-spacing: 0.1rem;
     font-size: 1rem;
     font-weight: bold;
@@ -206,6 +210,7 @@ main {
 #btn-reset-game {
     padding: 5px 10px;
     background-color: white;
+    color: navy;
     font-size: 1rem;
     letter-spacing: 0.1rem;
     font-family: 'Shadows Into Light', cursive;
