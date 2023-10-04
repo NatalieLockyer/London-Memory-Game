@@ -37,6 +37,11 @@ h1 {
 
 /* Main Styling*/
 
+main {
+    background-image: linear-gradient(lightblue, navy);
+    ;
+}
+
 .h2p-container {
     text-align: center;
     padding: 20px;
@@ -210,6 +215,7 @@ h1 {
 
 /*Footer Styling*/
 footer {
+    background-color: navy;
     margin-top: auto;
 }
 
@@ -227,11 +233,12 @@ footer {
 }
 
 #social-media a {
-    color: black;
+    color: whitesmoke;
 }
 
 .copyright {
-    background-color: white;
+    background-color: navy;
+    color: whitesmoke;
     text-align: center;
     letter-spacing: 0.3rem;
 }
