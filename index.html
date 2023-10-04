@@ -20,7 +20,7 @@
 <body>
     <!--Header on Homepage-->
     <header>
-        
+
         <div class="hero">
             <h1 class="main-title">London Landmarks Memory Game</h1>
         </div>
@@ -30,7 +30,6 @@
     <main>
         <!--How to play button-->
         <div class="h2p-container">
-            <button id="btn-how-to-play">How to Play!</button>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -48,6 +47,7 @@
                     </p>
                 </div>
             </div>
+            <button id="btn-how-to-play">How to Play!</button>
         </div>
 
         <!--Countdown timer - will start on the click of the first card. -->
@@ -64,17 +64,6 @@
                 <div id="moves-counter">0</div>
             </div>
         </div>
-        </div>
-
-        <!--Modal Win Message-->
-        <div id="winner">
-            <div id="modal-content" class="modal"></div>
-            <div class="close">&times;</div>
-            <p id="modal-content">Conratulations you have beaten the clock...You Win!! Click Next to check out where
-                you
-                are on
-                the Leaderboard!!</p>
-            <div id="btnNext" class="button">Next</div>
         </div>
 
 
@@ -192,6 +181,18 @@
         </ul>
         <p class="copyright"> Created by Natalie Lockyer - Copyright Protected 2023</p>
     </footer>
+
+
+
+    <!--Modal Win Message-->
+    <div id="winner">
+        <div id="modal-content" class="modal"></div>
+        <div class="close">&times;</div>
+        <p id="winner-content">Congratulations you have beaten the clock...You Win!! Click Next to check out where you
+            are on the Leaderboard!!</p>
+        <div id="btnNext" class="button">Next</div>
+    </div>
+
 
 
     <script src="assets/js/script.js"></script>

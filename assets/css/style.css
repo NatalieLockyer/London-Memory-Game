@@ -218,6 +218,30 @@ main {
     border-radius: 12px;
 }
 
+/*Winning Modal Content - This is the model content*/
+.winning-content {
+    background-color: white;
+    margin: 15% auto;
+    z-index: 5;
+    padding: 20px;
+    border: 1px solid lightgray;
+    width: 75%;
+}
+
+/*Close Button*/
+.close {
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgba (0, 0, 0, 0.5);
+}
+
 /*Footer Styling*/
 footer {
     background-color: navy;

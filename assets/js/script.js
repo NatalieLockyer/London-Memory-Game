@@ -10,7 +10,8 @@ const modal = document.getElementById('myModal');
 const btn = document.getElementById('btn-how-to-play');
 const span = document.getElementsByClassName('close')[0];
 const timeValue = document.getElementById('timer-area');
-const modalWin = document.getElementById('winner-modal')
+const modalWin = document.getElementById('modal-content')
+const maxMatch = 8;
 
 //event listeners
 resetGameBtn.addEventListener('click', resetGame);
@@ -24,15 +25,13 @@ let firstCard, secondCard;
 
 //Initial moves taken and Win count 
 let movesTaken = 0;
-let winCount = 0;
-let match = 0
-let length = movesTaken.length;
+let perfectMatch = 0;
 
 //Initial Time
 let seconds = 0;
 let minutes = 0;
 let hasStartedTimer = false;
-let interval = 0;
+let liveTimer = 0;
 
 /*
 const items = [
@@ -78,9 +77,14 @@ const timeGenerator = () => {
 //Start the timer when the first pair has been selected
 function startTimer() {
     if (!hasStartedTimer) {
-        interval = setInterval(timeGenerator, 1000);
+        liveTimer = setInterval(timeGenerator, 1000);
         hasStartedTimer = true; // Set it to true so it doesn't start again.
     }
+}
+
+//stop timer 
+function stopTimer() {
+    clearInterval(liveTimer);
 }
 
 // flipcard function//
@@ -99,7 +103,7 @@ function flipCardStart() {
     checkForMatch();
 }
 
-// flipcard function//
+//timer starts on first flip card
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -117,8 +121,6 @@ function flipCard() {
 }
 
 
-
-
 /* //Message to alert player they have won. ************************
 function replay() {
     document.getElementById('winner').style.display = 'none';
@@ -128,11 +130,13 @@ function replay() {
 //Check for match function
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-    movesTaken++;
-    isMatch ? disableCards() : unflipCards();
-    console.log('moves taken:', movesTaken);
-    console.log('moves counter:', movesCounter);
-    movesCounter.innerText = movesTaken;
+    if (isMatch) perfectMatch += 1;
+
+    if (isMatch) pairMatch();
+    else noMatch();
+
+    if (perfectMatch === maxMatch) winGame()
+
 }
 
 /*function to stop the timer once all cards are overturned
@@ -145,20 +149,30 @@ if (flipCard[0] === flipCard[1]) {
 */
 
 //Disable card function 
-function disableCards() {
+function pairMatch() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
 };
 
 //Unflip card function 
-function unflipCards() {
+function noMatch() {
+    lockBoard = true
+
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetBoard();
     }, 1500);
+
+    //Add a move
+    addMove();
 };
+
+function addMove() {
+    moves++;
+    movesTaken.innerHTML = moves;
+}
 
 //Reset board function 
 function resetBoard() {
@@ -178,6 +192,17 @@ function resetGame() {
         card.style.order = ramdomPos;
     });
 })();
+
+//WinGame Function
+function winGame() {
+    stopTimer();
+    showWinningMessage();
+}
+
+function showWinningMessage() {
+    modalWin.style.display = "block";
+
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard))
     ;
