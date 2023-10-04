@@ -24,7 +24,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 
 //Initial moves taken and Win count 
-let movesTaken = 0;
+let moves = 0;
 let perfectMatch = 0;
 
 //Initial Time
@@ -48,12 +48,11 @@ const items = [
 
 //Modal to appear when "how to play button" is pressed
 //Credit to w3schools for help with this code - details in ReadME
-
 btn.onclick = function () {
     modal.style.display = "block";
 };
 
-//When user clicks on the X (close button)
+//Modal - When user clicks on the X (close button)
 span.onclick = function () {
     modal.style.display = "none";
 };
@@ -87,7 +86,7 @@ function stopTimer() {
     clearInterval(liveTimer);
 }
 
-// flipcard function//
+// function for flipping the card over//
 function flipCardStart() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -103,7 +102,7 @@ function flipCardStart() {
     checkForMatch();
 }
 
-//timer starts on first flip card
+//function to ensure the timer starts when player has turned over two cards
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -115,16 +114,11 @@ function flipCard() {
     }
     // Start the timer on the first card click
     startTimer();
+
     secondCard = this;
     lockBoard = true;
     checkForMatch();
 }
-
-
-/* //Message to alert player they have won. ************************
-function replay() {
-    document.getElementById('winner').style.display = 'none';
-}*/
 
 
 //Check for match function
@@ -139,23 +133,14 @@ function checkForMatch() {
 
 }
 
-/*function to stop the timer once all cards are overturned
-if (flipCard[0] === flipCard[1]) {
-    flipCard[0].isMatch = true;
-    flipCard[1].isMatch = true;
-    flipCard.length = 0;
-    numMatches++;
-}
-*/
-
-//Disable card function 
+//function to disable card when a pair is found 
 function pairMatch() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
 };
 
-//Unflip card function 
+//Ufunction to unflip cards when they are not a match 
 function noMatch() {
     lockBoard = true
 
@@ -169,10 +154,14 @@ function noMatch() {
     addMove();
 };
 
+moves = 0;
+movesCounter.innerHTML = 0
+
 function addMove() {
     moves++;
-    movesTaken.innerHTML = moves;
+    movesCounter.innerHTML = moves;
 }
+
 
 //Reset board function 
 function resetBoard() {
