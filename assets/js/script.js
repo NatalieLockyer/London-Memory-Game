@@ -7,8 +7,9 @@ const cards = document.querySelectorAll('.memory-card');
 const resetGameBtn = document.getElementById('btn-reset-game');
 const movesCounter = document.getElementById('moves-counter');
 const modal = document.getElementById('my-modal');
+const winningModal = document.getElementById('win-modal')
 const btn = document.getElementById('btn-how-to-play');
-const span = document.getElementsByClassName('close')[0];
+const span = document.getElementsByClassName('close')[1];
 const timeValue = document.getElementById('timer-area');
 const modalWin = document.getElementById('modal-content')
 const maxMatch = 8;
@@ -47,7 +48,7 @@ const items = [
 
 
 //Modal to appear when "how to play button" is pressed
-//Credit to w3schools for help with this code - details in ReadME
+//Credit to w3schools for help with creating a modal- details in ReadME
 btn.onclick = function () {
     modal.style.display = "block";
 };
@@ -189,9 +190,13 @@ function winGame() {
 }
 
 function showWinningMessage() {
-    modal.style.display = "block";
-
+    winningModal.style.display = "block";
 }
+
+//Modal - When user clicks on the X (close button)
+span.onclick = function () {
+    winningModal.style.display = "none";
+};
 
 cards.forEach(card => card.addEventListener('click', flipCard))
     ;

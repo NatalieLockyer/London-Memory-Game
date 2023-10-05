@@ -228,6 +228,24 @@ main {
     width: 75%;
 }
 
+.close {
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgba (0, 0, 0, 0.5);
+}
+
+/*Hover for close button*/
+.close:hover {
+    font-weight: 700;
+}
+
 /*Footer Styling*/
 footer {
     background-color: navy;
