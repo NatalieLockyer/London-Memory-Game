@@ -13,6 +13,7 @@
 /*General Styling*/
 
 body {
+    background-image: linear-gradient(lightblue, navy);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,9 +23,6 @@ body {
 
 /*Header Styling*/
 header {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/assets/images/background/skyline.jpg);
-    background-repeat: no-repeat;
-    background-position-x: center;
     padding: 20px;
 }
 
@@ -37,9 +35,7 @@ h1 {
 
 /* Main Styling*/
 
-main {
-    background-image: linear-gradient(lightblue, navy);
-}
+main {}
 
 .h2p-container {
     text-align: center;
@@ -247,7 +243,6 @@ main {
 
 /*Footer Styling*/
 footer {
-    background-color: navy;
     margin-top: inherit;
 }
 
