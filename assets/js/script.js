@@ -180,7 +180,13 @@ function resetGame() {
 The message will also include how long the player took to complete and how many moves they made*/
 function winGame() {
     stopTimer();
-    showWinningMessage(moves, timeTaken);
+    showWinningMessage(movesCounter, timeTaken);
+
+    timeTaken = timeValue.innerHTML
+    lastMove = movesCounter.innerHTML
+
+        ('lastMove').innerHTML = movesCounter;
+    ('timeValue').innerHTML = timeTaken;
 };
 
 //Function to display the winning modal message
@@ -191,11 +197,7 @@ function showWinningMessage() {
 //closes the modal when user clicks on the X (close button)
 winningSpan.onclick = function () {
     modal.style.display = "none";
-    timeTaken = timeValue.innerHTML
-    lastMove = movesCounter.innerHTML
 
-    document.getElementById('lastMove').innerHTML = movesCounter;
-    document.getElementById('timeValue').innerHTML = timeTaken;
 };
 
 cards.forEach(card => card.addEventListener('click', flipCard))

@@ -13,7 +13,7 @@
 /*General Styling*/
 
 body {
-    background-image: linear-gradient(lightblue, navy);
+    background-image: linear-gradient(white, darkgray);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
