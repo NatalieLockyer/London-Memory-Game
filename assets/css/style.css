@@ -39,7 +39,6 @@ h1 {
 
 main {
     background-image: linear-gradient(lightblue, navy);
-    ;
 }
 
 .h2p-container {
@@ -249,7 +248,7 @@ main {
 /*Footer Styling*/
 footer {
     background-color: navy;
-    margin-top: auto;
+    margin-top: inherit;
 }
 
 #social-media {
@@ -270,7 +269,7 @@ footer {
 }
 
 .copyright {
-    background-color: navy;
+    background-color: inherit;
     color: whitesmoke;
     text-align: center;
     letter-spacing: 0.3rem;
