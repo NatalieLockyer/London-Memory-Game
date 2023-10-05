@@ -34,30 +34,16 @@ let minutes = 0;
 let hasStartedTimer = false;
 let liveTimer = 0;
 
-/*
-const items = [
-    { name: "Big Ben", image: "front-card.jpg" },
-    { name: "Buckingham Palace", image: "buckingham-palace.jpg" },
-    { name: "Gerkin", image: "gerkin.jpg" },
-    { name: "London Eye", image: "london-eye.jpg" },
-    { name: "London Underground", image: "london-underground.jpg" },
-    { name: "Red Bus", image: "red-bus.jpg" },
-    { name: "The Shard", image: "the-shard.jpg" },
-    { name: "Tower Bridge", image: "tower-bridge.jpg" }
-]*/
-
-
-//Modal to appear when "how to play button" is pressed
-//Credit to w3schools for help with creating a modal- details in ReadME
+/*Modal to appear when "how to play button" is pressed
+Credit given to w3schools for help with creating a modal- details in ReadME*/
 btn.onclick = function () {
     modal.style.display = "block";
 };
 
-//Modal - When user clicks on the X (close button)
+//How to play Modal - closes the modal when user clicks on the X (close button)
 span.onclick = function () {
     modal.style.display = "none";
 };
-
 
 //Layout of Timer
 const timeGenerator = () => {
@@ -74,20 +60,20 @@ const timeGenerator = () => {
 
 };
 
-//Start the timer when the first pair has been selected
+//Fucntion to start the timer when the first pair has been selected
 function startTimer() {
     if (!hasStartedTimer) {
         liveTimer = setInterval(timeGenerator, 1000);
-        hasStartedTimer = true; // Set it to true so it doesn't start again.
+        hasStartedTimer = true; // Set to true so it doesn't start again.
     }
 }
 
-//stop timer 
+//Fucntion to stop timer 
 function stopTimer() {
     clearInterval(liveTimer);
 }
 
-// function for flipping the card over//
+//Function for flipping the card over when clicked on
 function flipCardStart() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -103,7 +89,7 @@ function flipCardStart() {
     checkForMatch();
 }
 
-//function to ensure the timer starts when player has turned over two cards
+//Function to ensure the timer starts when player has turned over two cards
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -121,8 +107,7 @@ function flipCard() {
     checkForMatch();
 }
 
-
-//Check for match function
+//Fucntion to check for a matching pair
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
     if (isMatch) perfectMatch += 1;
@@ -134,14 +119,14 @@ function checkForMatch() {
 
 }
 
-//function to disable card when a pair is found 
+//Function to disable the cards when a pair is found 
 function pairMatch() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
 };
 
-//function to unflip cards when they are not a match 
+//Function to unflip the cards when they are not a match 
 function noMatch() {
     lockBoard = true
 
@@ -158,24 +143,25 @@ function noMatch() {
 moves = 0;
 movesCounter.innerHTML = 0
 
+//Function to add moves to the counter
 function addMove() {
     moves++;
     movesCounter.innerHTML = moves;
 }
 
 
-//Reset board function 
+//Function to reset the board 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 };
 
-//Reset board btn function
+//Function to reset the board when the 'reset current button' is clicked
 function resetGame() {
     window.location.reload();
 };
 
-//Shuffle cards function 
+//Function to shuffle the cards 
 (function shuffle() {
     cards.forEach(card => {
         let ramdomPos = Math.floor(Math.random() * 12);
@@ -183,17 +169,18 @@ function resetGame() {
     });
 })();
 
-//WinGame Function
+//Function to end the game, stop the timer and produce a modal with a winning message 
 function winGame() {
     stopTimer();
     showWinningMessage();
 }
 
+//Function to display the winning modal message
 function showWinningMessage() {
     winningModal.style.display = "block";
 }
 
-//Modal - When user clicks on the X (close button)
+//Winning Modal - closes modal When user clicks on the X (close button)
 span.onclick = function () {
     winningModal.style.display = "none";
 };
