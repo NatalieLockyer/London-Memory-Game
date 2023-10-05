@@ -10,8 +10,10 @@ const modal = document.getElementById('my-modal');
 const winningModal = document.getElementById('win-modal')
 const btn = document.getElementById('btn-how-to-play');
 const span = document.getElementsByClassName('close')[0];
+const winningSpan = document.getElementsByClassName('close')[0];
 const timeValue = document.getElementById('timer-area');
-const modalWin = document.getElementById('modal-content')
+const lastMove = document.getElementById('last-move');
+const timeEnd = document.getElementById('timer-taken');
 const maxMatch = 8;
 
 //event listeners
@@ -33,6 +35,9 @@ let seconds = 0;
 let minutes = 0;
 let hasStartedTimer = false;
 let liveTimer = 0;
+
+//Winning score and time
+let timeTaken = 0;
 
 /*Modal to appear when "how to play button" is pressed
 Credit given to w3schools for help with creating a modal- details in ReadME*/
@@ -66,12 +71,12 @@ function startTimer() {
         liveTimer = setInterval(timeGenerator, 1000);
         hasStartedTimer = true; // Set to true so it doesn't start again.
     }
-}
+};
 
 //Fucntion to stop timer 
 function stopTimer() {
     clearInterval(liveTimer);
-}
+};
 
 //Function for flipping the card over when clicked on
 function flipCardStart() {
@@ -87,7 +92,7 @@ function flipCardStart() {
     secondCard = this;
     lockBoard = true;
     checkForMatch();
-}
+};
 
 //Function to ensure the timer starts when player has turned over two cards
 function flipCard() {
@@ -105,19 +110,22 @@ function flipCard() {
     secondCard = this;
     lockBoard = true;
     checkForMatch();
-}
+};
 
-//Fucntion to check for a matching pair
+//Function to check for a matching pair
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-    if (isMatch) perfectMatch += 1;
+    if (isMatch)
+        perfectMatch += 1;
 
-    if (isMatch) pairMatch();
-    else noMatch();
+    if (isMatch)
+        pairMatch();
+    else
+        noMatch();
 
     if (perfectMatch === maxMatch) winGame()
 
-}
+};
 
 //Function to disable the cards when a pair is found 
 function pairMatch() {
@@ -147,8 +155,7 @@ movesCounter.innerHTML = 0
 function addMove() {
     moves++;
     movesCounter.innerHTML = moves;
-}
-
+};
 
 //Function to reset the board 
 function resetBoard() {
@@ -169,16 +176,27 @@ function resetGame() {
     });
 })();
 
-//Function to end the game, stop the timer and produce a modal with a winning message 
+/*Function to end the game, stop the timer and produce a modal with a winning message.
+The message will also include how long the player took to complete and how many moves they made*/
 function winGame() {
     stopTimer();
-    showWinningMessage();
-}
+    showWinningMessage(moves, timeTaken);
+};
 
 //Function to display the winning modal message
 function showWinningMessage() {
     winningModal.style.display = "block";
-}
+};
+
+//closes the modal when user clicks on the X (close button)
+winningSpan.onclick = function () {
+    modal.style.display = "none";
+    timeTaken = timeValue.innerHTML
+    lastMove = movesCounter.innerHTML
+
+    document.getElementById('lastMove').innerHTML = movesCounter;
+    document.getElementById('timeValue').innerHTML = timeTaken;
+};
 
 cards.forEach(card => card.addEventListener('click', flipCard))
     ;

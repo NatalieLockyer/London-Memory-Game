@@ -214,7 +214,7 @@ main {}
 }
 
 /*Winning Modal Content - This is the model content*/
-#winning-content {
+.winner-content {
     background-color: white;
     margin: 15% auto;
     z-index: 5;
