@@ -226,6 +226,20 @@ h1 {
     width: 75%;
 }
 
+.win-steps {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+#play-again {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+}
+
 .play-again-btn {
     letter-spacing: 0.1rem;
     font-size: 0.9rem;

@@ -187,12 +187,13 @@
     <div id="winner-container">
         <div id="win-modal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" id="closeWinModal">&times;</span>
                 <p class="winner-content">Congratulations you have found all the matching pairs!
                     <br>
-                <p class="steps">You did this in <span id="last-move"></span> moves</p>
-                <p class="steps">and it took you <span id="time-taken"></span></p>
-                <p class="steps">Why not try again and beat your score. Click Play Again to resart the game</p>
+                <p class="win-steps">You did this in <span id="last-move"></span> moves</p>
+                <p class="win-steps">and it took you <span id="time-taken"></span></p>
+                <p class="win-steps">Why not try again and beat your score. Click Play Again to resart the game</p>
+                <br>
                 <div id="play-again" onclick="window.location.reload();" class="play-again-btn">Play Again</div>
             </div>
         </div>

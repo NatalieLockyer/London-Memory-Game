@@ -13,7 +13,8 @@ const span = document.getElementsByClassName('close')[0];
 const winningSpan = document.getElementsByClassName('close')[0];
 const timeValue = document.getElementById('timer-area');
 const lastMove = document.getElementById('last-move');
-const timeEnd = document.getElementById('timer-taken');
+const timeEnd = document.getElementById('time-taken');
+const closeWinModal = document.getElementById('closeWinModal');
 const maxMatch = 8;
 
 //event listeners
@@ -61,7 +62,7 @@ const timeGenerator = () => {
     //Format of time before displaying
     let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
     let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-    timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+    timeValue.innerHTML = `${minutesValue}:${secondsValue}`;
 
 };
 
@@ -180,23 +181,19 @@ function resetGame() {
 The message will also include how long the player took to complete and how many moves they made*/
 function winGame() {
     stopTimer();
-    showWinningMessage(movesCounter, timeTaken);
-
-    timeTaken = timeValue.innerHTML
-    lastMove = movesCounter.innerHTML
-
-        ('lastMove').innerHTML = movesCounter;
-    ('timeValue').innerHTML = timeTaken;
+    showWinningMessage(movesCounter, timeValue);
 };
 
 //Function to display the winning modal message
-function showWinningMessage() {
+function showWinningMessage(movesCounter) {
+    lastMove.innerHTML = movesCounter.innerHTML;
+    timeEnd.innerHTML = timeValue.innerHTML;
     winningModal.style.display = "block";
 };
 
 //closes the modal when user clicks on the X (close button)
-winningSpan.onclick = function () {
-    modal.style.display = "none";
+closeWinModal.onclick = function () {
+    winningModal.style.display = "none";
 
 };
 
