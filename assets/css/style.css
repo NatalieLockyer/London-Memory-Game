@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 /*root colours to be added here*/
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --whitesmoke: #F5F5F5;
+}
 
 /* Wildcard to override default style browser */
 * {
@@ -30,7 +35,7 @@ h1 {
     font-size: 2.5rem;
     letter-spacing: 0.3rem;
     text-align: center;
-    color: navy;
+    color: var(--black);
 }
 
 /* Main Styling*/
@@ -44,13 +49,13 @@ main {}
 
 #btn-how-to-play {
     padding: 5px 10px;
-    background-color: white;
+    background-color: var(--white);
     font-size: 1rem;
     border-radius: 12px;
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
     letter-spacing: 0.1rem;
-    color: navy;
+    color: var(--black);
 }
 
 /* The Modal (Background for the pop up box) */
@@ -69,7 +74,7 @@ main {}
 
 /*This is the model content*/
 .modal-content {
-    background-color: white;
+    background-color: var(--white);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid lightgray;
@@ -118,10 +123,10 @@ main {}
 }
 
 .countdown-container {
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     padding: 5px;
-    color: navy;
+    color: var(--black);
     letter-spacing: 0.1rem;
     font-size: 1rem;
     font-weight: bold;
@@ -138,10 +143,10 @@ main {}
 }
 
 .moves-container {
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     padding: 5px;
-    color: navy;
+    color: var(--black);
     letter-spacing: 0.1rem;
     font-size: 1rem;
     font-weight: bold;
@@ -204,8 +209,8 @@ main {}
 
 #btn-reset-game {
     padding: 5px 10px;
-    background-color: white;
-    color: navy;
+    background-color: var(--white);
+    color: var(--black);
     font-size: 1rem;
     letter-spacing: 0.1rem;
     font-family: 'Shadows Into Light', cursive;
@@ -215,7 +220,7 @@ main {}
 
 /*Winning Modal Content - This is the model content*/
 .winner-content {
-    background-color: white;
+    background-color: var(--white);
     margin: 15% auto;
     z-index: 5;
     padding: 20px;
@@ -260,12 +265,12 @@ footer {
 }
 
 #social-media a {
-    color: whitesmoke;
+    color: var(--whitesmoke);
 }
 
 .copyright {
     background-color: inherit;
-    color: whitesmoke;
+    color: var(--whitesmoke);
     text-align: center;
     letter-spacing: 0.3rem;
 }
