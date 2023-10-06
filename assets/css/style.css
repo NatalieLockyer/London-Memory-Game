@@ -65,17 +65,31 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    height: 600px;
+    height: 400px;
     background-color: rgb(128, 128, 128, 0.952);
 }
 
 /*This is the model content*/
 .modal-content {
     background-color: var(--white);
-    margin: 15% auto;
+    margin: 8% auto;
     padding: 25px;
     border: 1px solid lightgray;
     width: 75%;
+    height: 350px;
+}
+
+.game-instructions {
+    font-size: 1rem;
+    text-decoration: underline;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+
+.steps {
+    letter-spacing: 0.1rem;
+    font-size: 0.5rem;
+    font-weight: bold;
 }
 
 /*Close Button*/
@@ -95,19 +109,6 @@ h1 {
 /*Hover for close button*/
 .close:hover {
     font-weight: 700;
-}
-
-.game-instructions {
-    font-size: 1.5rem;
-    text-decoration: underline;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-}
-
-.steps {
-    letter-spacing: 0.1rem;
-    font-size: 0.9rem;
-    font-weight: bold;
 }
 
 /*Countdown and Moves taken styling*/
@@ -215,29 +216,34 @@ h1 {
 }
 
 /*Winning Modal Content - This is the model content*/
+
+#win-modal {
+    height: 500px;
+}
+
 .winner-content {
     background-color: var(--white);
-    margin: auto;
-    margin: auto;
-    font-size: 1.5rem;
+    margin-top: 20px;
+    font-size: 1.2rem;
     text-align: center;
     z-index: 5;
-    padding: 20px;
     width: 75%;
 }
 
 .win-steps {
-    font-size: 1rem;
+    padding: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
     letter-spacing: 0.1rem;
     text-align: center;
 }
 
 #play-again {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-align: center;
-}
+    text-decoration: underline;
 }
 
 .play-again-btn {
@@ -276,7 +282,7 @@ footer {
     letter-spacing: 0.3rem;
 }
 
-/*Media Queries for small device tablets and large phone 600px and up */
+/*Media Queries for small device tablets and large phone up to 600px */
 @media only screen and (max-width: 600px) and (min-width: 500px) {
 
     #btn-how-to-play {
@@ -284,7 +290,19 @@ footer {
     }
 
     #my-modal {
-        height: 550px;
+        height: 450px;
+    }
+
+    #modal-content {
+        height: 375px;
+    }
+
+    .game-instructions {
+        font-size: 1.2rem;
+    }
+
+    .steps {
+        font-size: 0.8rem;
     }
 
     .countdown-area {
@@ -301,10 +319,6 @@ footer {
 
     #btn-reset-game {
         font-size: 1.2rem;
-    }
-
-    #win-modal {
-        height: 550px;
     }
 
     a {
@@ -316,23 +330,35 @@ footer {
     }
 }
 
-/* Media Queries for small device tablets and large phone 600px and up
-@media only screen and (min-width: 601px) {
+/*Media Queries for medium device tablets 600px and up*/
+@media only screen and (max-width: 992px) and (min-width: 601px) {
 
 
     .main-title {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
 
     #btn-how-to-play {
         font-size: 1.5rem;
     }
 
-    .countdown-area {
+    #my-modal {
+        height: 500px;
+    }
+
+    .game-instructions {
         font-size: 1.5rem;
     }
 
+    .steps {
+        font-size: 1rem;
+    }
+
     .moves-box {
+        font-size: 1.5rem;
+    }
+
+    .countdown-container {
         font-size: 1.5rem;
     }
 
@@ -340,8 +366,31 @@ footer {
         font-size: 1.5rem;
     }
 
+    .game-area {
+        height: 830px;
+    }
+
+    .memory-card {
+        height: 175px;
+    }
 
     #btn-reset-game {
+        font-size: 1.5rem;
+    }
+
+    #win-modal {
+        height: 580px;
+    }
+
+    .winner-content {
+        font-size: 2rem;
+    }
+
+    .win-steps {
+        font-size: 1.3rem;
+    }
+
+    #play-again {
         font-size: 1.5rem;
     }
 
@@ -352,4 +401,246 @@ footer {
     .copyright {
         font-size: 1.5rem;
     }
-} */
+}
+
+/*Media Queries for medium device tablets 993px and up*/
+@media only screen and (max-width: 1199px) and (min-width: 993px) {
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    #btn-how-to-play {
+        font-size: 1.8rem;
+    }
+
+    #my-modal {
+        height: 590px;
+    }
+
+    .modal-content {
+        height: 420px;
+    }
+
+    .game-instructions {
+        font-size: 2rem;
+    }
+
+    .steps {
+        font-size: 1.2rem;
+    }
+
+    .countdown-area {
+        font-size: 1.8rem;
+    }
+
+    .moves-box {
+        font-size: 1.8rem;
+    }
+
+    #moves-counter {
+        font-size: 1.8rem;
+    }
+
+    .game-area {
+        height: 850px;
+    }
+
+    .memory-card {
+        height: 200px;
+    }
+
+    #btn-reset-game {
+        font-size: 1.8rem
+    }
+
+    #win-modal {
+        height: 580px;
+    }
+
+    .winner-content {
+        font-size: 2rem;
+    }
+
+    .win-steps {
+        font-size: 1.3rem;
+    }
+
+    #play-again {
+        font-size: 1.5rem;
+    }
+
+    .winner-content {
+        font-size: 2rem;
+    }
+
+    .win-steps {
+        font-size: 1.3rem;
+    }
+
+    #play-again {
+        font-size: 1.5rem;
+    }
+
+    a {
+        font-size: 1.8rem;
+    }
+
+    .copyright {
+        font-size: 1.8rem;
+    }
+}
+
+/*Media Queries for large device laptops 1200px and up*/
+@media only screen and (max-width: 1919px) and (min-width: 1200px) {
+
+    .main-title {
+        font-size: 4.5rem;
+    }
+
+    #btn-how-to-play {
+        font-size: 2rem;
+    }
+
+    #my-modal {
+        height: 650px;
+    }
+
+    .modal-content {
+        height: 500px;
+    }
+
+    .game-instructions {
+        font-size: 3rem
+    }
+
+    .steps {
+        font-size: 1.5rem;
+    }
+
+    .countdown-area {
+        font-size: 2rem;
+    }
+
+    .moves-box {
+        font-size: 2rem;
+    }
+
+    #moves-counter {
+        font-size: 2rem;
+    }
+
+    .game-area {
+        height: 1300px;
+    }
+
+    .memory-card {
+        height: 300px;
+    }
+
+    #btn-reset-game {
+        font-size: 2rem
+    }
+
+    #win-modal {
+        height: 620px;
+    }
+
+    .winner-content {
+        font-size: 2.4rem;
+    }
+
+    .win-steps {
+        font-size: 1.7rem;
+    }
+
+    #play-again {
+        font-size: 2.1rem;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+
+    .copyright {
+        font-size: 2rem;
+    }
+
+}
+
+/*Media Queries for medium device tablets 1200px and up*/
+@media only screen and (min-width: 1920px) {
+
+
+    .main-title {
+        font-size: 5rem;
+    }
+
+    #btn-how-to-play {
+        font-size: 3rem;
+    }
+
+    #my-modal {
+        height: 750px;
+    }
+
+    .modal-content {
+        height: 550px;
+    }
+
+    .game-instructions {
+        font-size: 3.5rem
+    }
+
+    .steps {
+        font-size: 2rem;
+    }
+
+    .game-area {
+        height: 1450px;
+    }
+
+    .memory-card {
+        height: 400px;
+    }
+
+    .winner-content {
+        font-size: 2.1rem;
+    }
+
+    .win-steps {
+        font-size: 1.6rem;
+    }
+
+    #play-again {
+        font-size: 1.8rem;
+    }
+
+    .countdown-area {
+        font-size: 3rem;
+    }
+
+    .moves-box {
+        font-size: 3rem;
+    }
+
+    #moves-counter {
+        font-size: 3rem;
+    }
+
+    .memory-card {
+        height: 350px;
+    }
+
+    #btn-reset-game {
+        font-size: 3rem
+    }
+
+    a {
+        font-size: 3rem;
+    }
+
+    .copyright {
+        font-size: 3rem;
+    }
+}
