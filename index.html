@@ -22,7 +22,7 @@
     <header>
 
         <div class="hero">
-            <h1 class="main-title">London Landmarks Memory Game</h1>
+            <h1 class="main-title">London Landmarks <br> Memory Game</h1>
         </div>
     </header>
 
@@ -39,8 +39,8 @@
                         <li>The timer will start when you select your first two cards</li>
                         <li>If the pictures match, the cards will remain turned over on the board</li>
                         <li>If the pictures dont match, they will be returned face down</li>
-                        <li>Once all the cards are turned over the game will end</li>
-                        <li>**Remember** You are working against the clock, check out your time and scores and play
+                        <li>Once all the cards match the game will end</li>
+                        <li>**Remember** You are working against the clock, check out your time and total moves & play
                             again to see if you can beat it.</li>
                         <li>Good luck</li>
                     </ol>
@@ -60,7 +60,7 @@
 
             <!--Amount of Moves taken counter-->
             <div class="moves-container">
-                <div class="moves-box">Incorrect Moves Taken:</div>
+                <div class="moves-box">Moves Taken:</div>
                 <div id="moves-counter">0</div>
             </div>
         </div>
@@ -190,10 +190,9 @@
                 <span class="close">&times;</span>
                 <p class="winner-content">Congratulations you have found all the matching pairs!
                     <br>
-                <p>You did this in <span id="last-move"></span> moves</p>
-                <p>and it took you <span id="time-taken"></span></p>
-                <p>Why not try again and beat your score. Click Play Again to resart the game
-                </p>
+                <p class="steps">You did this in <span id="last-move"></span> moves</p>
+                <p class="steps">and it took you <span id="time-taken"></span></p>
+                <p class="steps">Why not try again and beat your score. Click Play Again to resart the game</p>
                 <div id="play-again" onclick="window.location.reload();" class="play-again-btn">Play Again</div>
             </div>
         </div>
