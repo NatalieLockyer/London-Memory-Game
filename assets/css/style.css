@@ -155,19 +155,20 @@ h1 {
 
 /*Gaming area*/
 .game-area {
-    width: 90%;
-    height: 380px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
     perspective: 1000px;
 }
 
 .memory-card {
-    width: calc(25% - 10px);
-    height: calc(25% - 10px);
-    margin: 5px;
     position: relative;
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
     transform-style: preserve-3d;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     transform: scale(1);
@@ -187,12 +188,15 @@ h1 {
 .back-face {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    padding: 5px;
+    padding: 4px;
     position: absolute;
     border-radius: 10px;
     backface-visibility: hidden;
+    overflow: hidden;
 }
 
 .front-face {
@@ -289,12 +293,12 @@ footer {
         font-size: 1.2rem;
     }
 
-    #my-modal {
-        height: 450px;
+    .modal {
+        height: 400px;
     }
 
-    #modal-content {
-        height: 375px;
+    .modal-content {
+        height: 350px;
     }
 
     .game-instructions {
@@ -302,7 +306,7 @@ footer {
     }
 
     .steps {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .countdown-area {
@@ -315,6 +319,16 @@ footer {
 
     #moves-counter {
         font-size: 1.2rem;
+    }
+
+    .game-area {
+        width: 100vw;
+        margin: 25px auto;
+    }
+
+    .memory-card {
+        height: 100px;
+        width: 100px;
     }
 
     #btn-reset-game {
@@ -330,8 +344,17 @@ footer {
     }
 }
 
+/*Media Queries for small device tablets and large phone up to 600px */
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+
+    .memory-card {
+        height: 125px;
+        width: 125px;
+    }
+}
+
 /*Media Queries for medium device tablets 600px and up*/
-@media only screen and (max-width: 992px) and (min-width: 601px) {
+@media only screen and (max-width: 992px) and (min-width: 769px) {
 
 
     .main-title {
@@ -342,8 +365,12 @@ footer {
         font-size: 1.5rem;
     }
 
-    #my-modal {
+    .modal {
         height: 500px;
+    }
+
+    .modal-content {
+        height: 420px;
     }
 
     .game-instructions {
@@ -366,12 +393,9 @@ footer {
         font-size: 1.5rem;
     }
 
-    .game-area {
-        height: 830px;
-    }
-
     .memory-card {
-        height: 175px;
+        height: 150px;
+        width: 150px;
     }
 
     #btn-reset-game {
@@ -414,7 +438,7 @@ footer {
         font-size: 1.8rem;
     }
 
-    #my-modal {
+    .modal {
         height: 590px;
     }
 
@@ -442,12 +466,9 @@ footer {
         font-size: 1.8rem;
     }
 
-    .game-area {
-        height: 850px;
-    }
-
     .memory-card {
         height: 200px;
+        width: 200px;
     }
 
     #btn-reset-game {
@@ -502,12 +523,13 @@ footer {
         font-size: 2rem;
     }
 
-    #my-modal {
+    .modal {
         height: 650px;
     }
 
     .modal-content {
         height: 500px;
+        padding: 40px;
     }
 
     .game-instructions {
@@ -515,7 +537,7 @@ footer {
     }
 
     .steps {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .countdown-area {
@@ -530,12 +552,9 @@ footer {
         font-size: 2rem;
     }
 
-    .game-area {
-        height: 1300px;
-    }
-
     .memory-card {
-        height: 300px;
+        height: 250px;
+        width: 250px;
     }
 
     #btn-reset-game {
@@ -573,19 +592,20 @@ footer {
 
 
     .main-title {
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
     #btn-how-to-play {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
-    #my-modal {
-        height: 750px;
+    .modal {
+        height: 900px;
     }
 
     .modal-content {
-        height: 550px;
+        height: 700px;
+        padding: 40px;
     }
 
     .game-instructions {
@@ -594,26 +614,6 @@ footer {
 
     .steps {
         font-size: 2rem;
-    }
-
-    .game-area {
-        height: 1450px;
-    }
-
-    .memory-card {
-        height: 400px;
-    }
-
-    .winner-content {
-        font-size: 2.1rem;
-    }
-
-    .win-steps {
-        font-size: 1.6rem;
-    }
-
-    #play-again {
-        font-size: 1.8rem;
     }
 
     .countdown-area {
@@ -628,8 +628,21 @@ footer {
         font-size: 3rem;
     }
 
+    .winner-content {
+        font-size: 2.1rem;
+    }
+
+    .win-steps {
+        font-size: 1.6rem;
+    }
+
+    #play-again {
+        font-size: 1.8rem;
+    }
+
     .memory-card {
         height: 350px;
+        width: 350px
     }
 
     #btn-reset-game {
