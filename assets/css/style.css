@@ -98,8 +98,8 @@ h1 {
     border: none;
     outline: none;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -30;
+    right: -10;
     padding: 0 10px;
     font-size: 3rem;
     cursor: pointer;
@@ -157,7 +157,7 @@ h1 {
 .game-area {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
+    grid-gap: 5px;
     justify-content: center;
     justify-items: center;
     padding: 20px;
@@ -167,8 +167,8 @@ h1 {
 .memory-card {
     position: relative;
     cursor: pointer;
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
     transform-style: preserve-3d;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     transform: scale(1);
@@ -222,16 +222,23 @@ h1 {
 /*Winning Modal Content - This is the model content*/
 
 #win-modal {
-    height: 500px;
+    height: 400px;
+}
+
+.modal-content2 {
+    position: relative;
+    background-color: white;
+    margin: 10%;
+    height: 350px;
 }
 
 .winner-content {
     background-color: var(--white);
-    margin-top: 20px;
+    margin: 15px;
     font-size: 1.2rem;
     text-align: center;
     z-index: 5;
-    width: 75%;
+    width: fit-content;
 }
 
 .win-steps {
@@ -335,6 +342,26 @@ footer {
         font-size: 1.2rem;
     }
 
+    #win-modal {
+        height: 460px;
+    }
+
+    .modal-content2 {
+        height: 400px;
+    }
+
+    .winner-content {
+        font-size: 1.4rem;
+    }
+
+    .win-steps {
+        font-size: 1rem;
+    }
+
+    #play-again {
+        font-size: 1.2rem;
+    }
+
     a {
         font-size: 1.2rem;
     }
@@ -350,6 +377,27 @@ footer {
     .memory-card {
         height: 125px;
         width: 125px;
+    }
+
+    #win-modal {
+        height: 500px;
+    }
+
+    .modal-content2 {
+        height: 420px;
+    }
+
+    .winner-content {
+        font-size: 1.6rem;
+        width: inherit;
+    }
+
+    .steps {
+        font-size: 1.2rem;
+    }
+
+    #play-again {
+        font-size: 1.4rem;
     }
 }
 
@@ -403,19 +451,24 @@ footer {
     }
 
     #win-modal {
-        height: 580px;
+        height: 550px;
+    }
+
+    .modal-content2 {
+        height: 440px;
     }
 
     .winner-content {
-        font-size: 2rem;
+        width: inherit;
+        font-size: 1.6rem;
     }
 
     .win-steps {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     #play-again {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     a {
@@ -476,31 +529,24 @@ footer {
     }
 
     #win-modal {
-        height: 580px;
+        height: 600px;
+    }
+
+    .modal-content2 {
+        height: 470px;
     }
 
     .winner-content {
-        font-size: 2rem;
+        width: inherit;
+        font-size: 1.8rem;
     }
 
     .win-steps {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     #play-again {
-        font-size: 1.5rem;
-    }
-
-    .winner-content {
-        font-size: 2rem;
-    }
-
-    .win-steps {
-        font-size: 1.3rem;
-    }
-
-    #play-again {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     a {
@@ -562,19 +608,24 @@ footer {
     }
 
     #win-modal {
-        height: 620px;
+        height: 650px;
+    }
+
+    .modal-content2 {
+        height: 480px;
     }
 
     .winner-content {
-        font-size: 2.4rem;
+        width: inherit;
+        font-size: 2rem;
     }
 
     .win-steps {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     #play-again {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
 
     a {
@@ -628,16 +679,25 @@ footer {
         font-size: 3rem;
     }
 
+    #win-modal {
+        height: 900px;
+    }
+
+    .modal-content2 {
+        height: 510px;
+    }
+
     .winner-content {
-        font-size: 2.1rem;
+        width: inherit;
+        font-size: 2.2rem;
     }
 
     .win-steps {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     #play-again {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .memory-card {
