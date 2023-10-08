@@ -20,8 +20,10 @@ const maxMatch = 8;
 //event listeners
 resetGameBtn.addEventListener('click', resetGame);
 
-//This is the game logic, in order to flip the cards, check for a match, disable cards,//
-// unflip cards, reset board and shuffle.//
+/*This is the game logic, in order to flip the cards, check for a match, disable cards,
+ unflip cards, reset board and shuffle.
+ Credit for tutorial which I used to assist me with the game logic can be found in my ReadME,
+*/
 
 let hasFlippedCard = false;
 let lockBoard = false;

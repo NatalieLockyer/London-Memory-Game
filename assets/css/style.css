@@ -296,13 +296,16 @@ footer {
 }
 
 .container-404 {
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+}
+
+.text-404 {
     font-size: 2.5rem;
     text-align: center;
 }
 
-.text-404 {
-    font-size: 3.5rem;
-}
 
 /*Media Queries for small device tablets and large phone up to 600px */
 @media only screen and (max-width: 600px) and (min-width: 500px) {
