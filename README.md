@@ -28,22 +28,23 @@ London Landmark Memory Game, is a version of the 'classic card' memory game. The
 + [Technologies Used](#technologies-used)
   + [Languages Used](#languages-used)
   + [Frameworks Used](#frameworks-used)
-+ [Testing]
-  + [Validator Testing]
-  + [Lighthouse Testing]
-  + [Responsiveness]
-  + [Full Testing ]
-  + [Testing User Stories]
-+ [Deployment and Local Deployment]
-  + [Deployment]
-  + [Local Deployment]
-+ [Credits]
-  + [Code]
-  + [Media]
-  + [Acknowledgements]
++ [Testing](#testing)
+  + [Validator Testing](#validator-testing)
+  + [Lighthouse Testing](#lighthouse-testing)
+  + [Responsiveness](#responsiveness)
+  + [Full Testing ](#full-testing)
+ + [Deployment and Local Deployment](#deployment-and-local-deployment)
+  + [Deployment](#deployment)
+  + [Local Deployment](#local-deployment)
+  + [How to Clone](#how-to-clone)
++ [Credits](#credits)
+  + [Code](#code)
+  + [Media](#media)
+  + [Acknowledgements](#acknowledgements)
 
   ***
   ***
+
 # User Experience
 
 ### Key Project Goals
@@ -156,11 +157,6 @@ The user will see a message to congratulate them on finding all the matching car
 <img src="./assets/images/readme-images/image-09.png">
 </p>
 
-
-<p align="center">
-<img src="./assets/images/readme-images/image-09.png">
-</p>
-
 ## Future Features
 In the future I would like to add the following features
 
@@ -188,5 +184,74 @@ JavaScript - This was used to create the logic for the game and to manipulate th
 [Validator](https://validator.w3.org/) - This was used to check for any errors in my HTML and CSS code
 [Beautify Tool]() - This was used to 'beautify' my Javascript code
 
+# Testing
+
+  ## Validator Testing
+  I used the W3C Validator to validate the HTML and CSS on my page. The results are as follows:
+
+  * Index.html Page
+
+  <p align="center">
+  <img src="./assets/images/readme-images/image-10.png">
+  </p>
+
+  * Style.css Page
+
+  <p align="center">
+  <img src="./assets/images/readme-images/image-11.png">
+  </p>
+
+  ## Lighthouse Testing
+  TBC
+
+  ## Responsiveness
+  TBC
+
+  ## Full Testing 
+
+| Feature      | Expected Outcome | Testing Performed    | Result | Pass or Fail |
+|   :---       |      :----:      |        :----:        | :----: |    :----:    |
+| Home Page      |                  |                      |        |              |
+| How to Play Button  | When clicked <br> a modal will <br> appear with the <br> game instructions | Clicked button | Modal Opened    | Pass        |
+| X - to close modal  | When clicked <br> the modal <br> will close <br> | Clicked X | Modal closed   | Pass        |
+| Timer | When the first two <br> cards are selected <br> the timer will start <br> | two cards clicked | Timer started   | Pass        |
+| Moves Taken | When the user <br> selects two cards <br> that are not a match, <br> the moves taken will <br> go up.| Cards are not a match | Moves taken goes to 1  | Pass        |
+| Flip cards | When the user <br> selects a card <br> it will flip over | Card clicked | Card flips | Pass        |
+| Matching Pair <br> stay locked on screen | When the user <br> selects two  matching cards <br> they will lock in place | Cards are a match | Cards stay locked on screen | Pass        |
+
+
+ # Deployment and Local Deployment
+  
+## Deployment
+  * Login to Github
+  * Open the repository
+  * Navigate to the settings tab
+  * Click on 'Pages' in the left hand column
+  * Under 'Source' select 'Deploy from branch'
+  * Under 'Branch' select 'main', 'root' and save. This step may take a little time to  process.
+  * Once completed, the URL will appear above 'source'.
+
+## Local Deployment
+  How to Fork 
+  * Login to Github
+  * Open repository
+  * Click fork button in the top right corner.
+
+## How to clone 
+  * Login to Github
+  * Open repository 
+  * Click on the 'code' button, select which you would like with HTTPS, SSH or GitHib CLI and copy
+  * Open terminal in code editor and change the current directory to the location you want to use is
+  * Type 'git clone' and paste link that you copied in step 3, press enter
+
+
+ # Credits
+
+  ## Code
+  TBC
+  ## Media
+  TBC
+  ## Acknowledgements
+  TBC
 
 
