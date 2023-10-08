@@ -65,18 +65,17 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    height: 400px;
-    background-color: rgb(128, 128, 128, 0.952);
+    height: 350px;
+    background-color: var(--whitesmoke);
+    border-style: solid;
+    border-color: grey;
 }
 
 /*This is the model content*/
 .modal-content {
-    background-color: var(--white);
     margin: 8% auto;
     padding: 25px;
-    border: 1px solid lightgray;
     width: 75%;
-    height: 350px;
 }
 
 .game-instructions {
@@ -222,28 +221,35 @@ h1 {
 /*Winning Modal Content - This is the model content*/
 
 #win-modal {
-    height: 400px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 350px;
+    background-color: var(--whitesmoke);
+    border-style: solid;
+    border-color: grey;
 }
 
-.modal-content2 {
-    position: relative;
-    background-color: white;
-    margin: 10%;
-    height: 350px;
+.modal-content {
+    margin: 8% auto;
+    padding: 25px;
+    width: 75%;
 }
 
 .winner-content {
-    background-color: var(--white);
-    margin: 15px;
-    font-size: 1.2rem;
+    background-color: var(--whitesmoke);
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
     z-index: 5;
-    width: fit-content;
 }
 
 .win-steps {
-    padding: 10px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
     text-align: center;
@@ -296,36 +302,8 @@ footer {
 /*Media Queries for small device tablets and large phone up to 600px */
 @media only screen and (max-width: 600px) and (min-width: 500px) {
 
-    #btn-how-to-play {
-        font-size: 1.2rem;
-    }
-
     .modal {
         height: 400px;
-    }
-
-    .modal-content {
-        height: 350px;
-    }
-
-    .game-instructions {
-        font-size: 1.2rem;
-    }
-
-    .steps {
-        font-size: 0.7rem;
-    }
-
-    .countdown-area {
-        font-size: 1.2rem;
-    }
-
-    .moves-box {
-        font-size: 1.2rem;
-    }
-
-    #moves-counter {
-        font-size: 1.2rem;
     }
 
     .game-area {
@@ -338,36 +316,20 @@ footer {
         width: 100px;
     }
 
-    #btn-reset-game {
-        font-size: 1.2rem;
-    }
-
     #win-modal {
-        height: 460px;
-    }
-
-    .modal-content2 {
         height: 400px;
     }
 
     .winner-content {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .win-steps {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     #play-again {
-        font-size: 1.2rem;
-    }
-
-    a {
-        font-size: 1.2rem;
-    }
-
-    .copyright {
-        font-size: 1.2rem;
+        font-size: 1.rem;
     }
 }
 
@@ -378,47 +340,18 @@ footer {
         height: 125px;
         width: 125px;
     }
-
-    #win-modal {
-        height: 500px;
-    }
-
-    .modal-content2 {
-        height: 420px;
-    }
-
-    .winner-content {
-        font-size: 1.6rem;
-        width: inherit;
-    }
-
-    .win-steps {
-        font-size: 1.2rem;
-    }
-
-    #play-again {
-        font-size: 1.4rem;
-    }
 }
 
 /*Media Queries for medium device tablets 600px and up*/
 @media only screen and (max-width: 992px) and (min-width: 769px) {
 
 
-    .main-title {
-        font-size: 3rem;
-    }
-
-    #btn-how-to-play {
-        font-size: 1.5rem;
-    }
-
     .modal {
         height: 500px;
     }
 
-    .modal-content {
-        height: 420px;
+    #btn-how-to-play {
+        font-size: 1.5rem;
     }
 
     .game-instructions {
@@ -451,15 +384,10 @@ footer {
     }
 
     #win-modal {
-        height: 550px;
-    }
-
-    .modal-content2 {
-        height: 440px;
+        height: 500px;
     }
 
     .winner-content {
-        width: inherit;
         font-size: 1.6rem;
     }
 
@@ -483,79 +411,11 @@ footer {
 /*Media Queries for medium device tablets 993px and up*/
 @media only screen and (max-width: 1199px) and (min-width: 993px) {
 
-    .main-title {
-        font-size: 3.5rem;
-    }
-
-    #btn-how-to-play {
-        font-size: 1.8rem;
-    }
-
-    .modal {
-        height: 590px;
-    }
-
-    .modal-content {
-        height: 420px;
-    }
-
-    .game-instructions {
-        font-size: 2rem;
-    }
-
-    .steps {
-        font-size: 1.2rem;
-    }
-
-    .countdown-area {
-        font-size: 1.8rem;
-    }
-
-    .moves-box {
-        font-size: 1.8rem;
-    }
-
-    #moves-counter {
-        font-size: 1.8rem;
-    }
-
     .memory-card {
-        height: 200px;
-        width: 200px;
+        height: 175px;
+        width: 175px;
     }
 
-    #btn-reset-game {
-        font-size: 1.8rem
-    }
-
-    #win-modal {
-        height: 600px;
-    }
-
-    .modal-content2 {
-        height: 470px;
-    }
-
-    .winner-content {
-        width: inherit;
-        font-size: 1.8rem;
-    }
-
-    .win-steps {
-        font-size: 1.4rem;
-    }
-
-    #play-again {
-        font-size: 1.6rem;
-    }
-
-    a {
-        font-size: 1.8rem;
-    }
-
-    .copyright {
-        font-size: 1.8rem;
-    }
 }
 
 /*Media Queries for large device laptops 1200px and up*/
@@ -571,11 +431,6 @@ footer {
 
     .modal {
         height: 650px;
-    }
-
-    .modal-content {
-        height: 500px;
-        padding: 40px;
     }
 
     .game-instructions {
@@ -599,8 +454,8 @@ footer {
     }
 
     .memory-card {
-        height: 250px;
-        width: 250px;
+        height: 200px;
+        width: 200px;
     }
 
     #btn-reset-game {
@@ -616,7 +471,6 @@ footer {
     }
 
     .winner-content {
-        width: inherit;
         font-size: 2rem;
     }
 
@@ -654,11 +508,6 @@ footer {
         height: 900px;
     }
 
-    .modal-content {
-        height: 700px;
-        padding: 40px;
-    }
-
     .game-instructions {
         font-size: 3.5rem
     }
@@ -683,12 +532,7 @@ footer {
         height: 900px;
     }
 
-    .modal-content2 {
-        height: 510px;
-    }
-
     .winner-content {
-        width: inherit;
         font-size: 2.2rem;
     }
 
@@ -701,8 +545,8 @@ footer {
     }
 
     .memory-card {
-        height: 350px;
-        width: 350px
+        height: 300px;
+        width: 300px
     }
 
     #btn-reset-game {
