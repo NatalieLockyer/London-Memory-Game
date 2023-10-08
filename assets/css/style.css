@@ -110,7 +110,7 @@ h1 {
     font-weight: 700;
 }
 
-/*Countdown and Moves taken styling*/
+/*Timer and Moves taken styling*/
 .timer-moves-container {
     padding: 20px;
     display: flex;
@@ -202,6 +202,7 @@ h1 {
     transform: rotateY(180deg);
 }
 
+/* Reset game area*/
 .reset-game {
     text-align: center;
     padding: 20px;
@@ -219,7 +220,6 @@ h1 {
 }
 
 /*Winning Modal Content - This is the model content*/
-
 #win-modal {
     display: none;
     position: fixed;
@@ -232,12 +232,6 @@ h1 {
     background-color: var(--whitesmoke);
     border-style: solid;
     border-color: grey;
-}
-
-.modal-content {
-    margin: 8% auto;
-    padding: 25px;
-    width: 75%;
 }
 
 .winner-content {
@@ -263,6 +257,7 @@ h1 {
     text-decoration: underline;
 }
 
+/* Play again button within modal*/
 .play-again-btn {
     letter-spacing: 0.1rem;
     font-size: 0.9rem;
@@ -275,6 +270,7 @@ footer {
     margin-top: inherit;
 }
 
+/*Social Media icons and links*/
 #social-media {
     text-align: center;
     padding: 10px 0 0 0;
@@ -297,6 +293,15 @@ footer {
     color: var(--whitesmoke);
     text-align: center;
     letter-spacing: 0.3rem;
+}
+
+.container-404 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.text-404 {
+    font-size: 3.5rem;
 }
 
 /*Media Queries for small device tablets and large phone up to 600px */
@@ -344,7 +349,6 @@ footer {
 
 /*Media Queries for medium device tablets 600px and up*/
 @media only screen and (max-width: 992px) and (min-width: 769px) {
-
 
     .modal {
         height: 500px;
@@ -415,7 +419,6 @@ footer {
         height: 175px;
         width: 175px;
     }
-
 }
 
 /*Media Queries for large device laptops 1200px and up*/
@@ -494,7 +497,6 @@ footer {
 
 /*Media Queries for medium device tablets 1200px and up*/
 @media only screen and (min-width: 1920px) {
-
 
     .main-title {
         font-size: 6rem;
