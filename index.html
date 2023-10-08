@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,8 +41,8 @@
             <div id="my-modal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p class="game-instructions">How to Play!
-                        <br>
+                    <p class="game-instructions">How to Play!</p>
+                    <br>
                     <ol class="steps">
                         <li>The timer will start when you select your first two cards</li>
                         <li>If the pictures match, the cards will remain turned over on the board</li>
@@ -51,7 +52,6 @@
                             again to see if you can beat it.</li>
                         <li>Good luck</li>
                     </ol>
-                    </p>
                 </div>
             </div>
             <button id="btn-how-to-play">How to Play!</button>
@@ -71,11 +71,9 @@
                 <div id="moves-counter">0</div>
             </div>
         </div>
-        </div>
-
 
         <!--This is the game area - I have used a tutorial for this part and is documented in the credits section of my ReadME-->
-        <section id="game-container" class="game-area">
+        <div id="game-container" class="game-area">
             <div class="memory-card" data-name="Big Ben">
                 <img class="front-face" src="assets/images/cards/front-card.jpg" alt="Image of Big Ben">
                 <img class="back-face" src="assets/images/cards/back-card.jpg" alt="Great Britain Flag">
@@ -158,7 +156,7 @@
                 <img class="back-face" src="assets/images/cards/back-card.jpg" alt="Great Britain Flag">
             </div>
 
-        </section>
+        </div>
         <!--Reset button to restart the game-->
         <div class="reset-game">
             <button id="btn-reset-game">Reset Current Game</button>
