@@ -207,7 +207,7 @@ h1 {
     text-align: center;
     padding: 20px;
 }
-
+/*Reset Button*/
 #btn-reset-game {
     padding: 5px 10px;
     background-color: var(--white);
