@@ -202,8 +202,11 @@ JavaScript - This was used to create the logic for the game and to manipulate th
   </p>
 
   ## Lighthouse Testing
-  TBC
+  I have performed the lighthouse Testing and got the following results:
 
+ <p align="center">
+  <img src="./assets/images/readme-images/image-12.png">
+  </p>
   ## Problems Encountered 
   * When I initially added the timer, this would start as soon as the page loaded. To fix this, I added a function that would start the timer once the first two cards were clicked on. 
 
