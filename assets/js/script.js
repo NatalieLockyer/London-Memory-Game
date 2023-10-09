@@ -22,7 +22,8 @@ resetGameBtn.addEventListener('click', resetGame);
 
 /*This is the game logic, in order to flip the cards, check for a match, disable cards,
  unflip cards, reset board and shuffle.
- Credit for tutorial which I used to assist me with the game logic can be found in my ReadME,
+ Credit for tutorial which I used to assist me with the game logic can be found in my ReadME
+ https://medium.com/free-code-camp/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae
 */
 
 let hasFlippedCard = false;
@@ -53,7 +54,9 @@ span.onclick = function () {
     modal.style.display = "none";
 };
 
-//Layout of Timer
+/*Layout of Timer
+As documented in my Readme - code was adapted from this source to help create the timer
+https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/tree/master*/
 const timeGenerator = () => {
     seconds += 1;
     if (seconds > 60) {
@@ -181,6 +184,9 @@ function resetGame() {
 
 /*Function to end the game, stop the timer and produce a modal with a winning message.
 The message will also include how long the player took to complete and how many moves they made*/
+
+/*As documented in my Readme - code was adapted from this source to help create the modal appear when all matching cards were turned over
+https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/tree/master*/
 function winGame() {
     stopTimer();
     showWinningMessage(movesCounter, timeValue);
