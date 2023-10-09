@@ -68,7 +68,7 @@ const timeGenerator = () => {
 
 };
 
-//Fucntion to start the timer when the first pair has been selected
+//Function to start the timer when the first pair has been selected
 function startTimer() {
     if (!hasStartedTimer) {
         liveTimer = setInterval(timeGenerator, 1000);
