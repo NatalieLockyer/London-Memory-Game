@@ -207,6 +207,7 @@ JavaScript - This was used to create the logic for the game and to manipulate th
  <p align="center">
   <img src="./assets/images/readme-images/image-12.png">
   </p>
+
   ## Problems Encountered 
   * When I initially added the timer, this would start as soon as the page loaded. To fix this, I added a function that would start the timer once the first two cards were clicked on. 
 
@@ -284,7 +285,7 @@ JavaScript - This was used to create the logic for the game and to manipulate th
   * [Vanilla JS Memory Game](https://medium.com/free-code-camp/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae) This is a tutorial I followed, some JavaScript code was taken and adapted to my style and game.
   * [W3Schools](https://www.w3schools.com/) was used to explain how to create a modal and used as a general source of knowledge.
   * [Loves Math project](https://learn.codeinstitute.net/dashboard)  was used as a general source of knowledge
-  * [CI Student Memory Card Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/tree/master)Code was adapted from this source for the following features, timer and when cards are matched a modal appears.
+  * [CI Student Memory Card Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/tree/master) Code was adapted from this source for the following features, timer and when cards are matched a winning modal appears.
   * [Slack Overflow](#https://stackoverflow.com/) was used to assist during debugging 
   * [MND Web Docs](#) was used as a general source of knowledge
   
